@@ -5,7 +5,6 @@ import classNames from 'classnames/bind';
 import styles from './Player.module.scss';
 import Button from '../../../components/Button';
 import request from '~/utils/httpRequest';
-import ReactHlsPlayer from 'react-hls-player';
 import Tippy from '@tippyjs/react';
 import { Link } from 'react-router-dom';
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
@@ -380,7 +379,6 @@ function Player() {
                 }}
                 onEnded={handleOnEnd}
             />
-            <ReactHlsPlayer hidden src={srcRadio} autoPlay={isRadioPlay} playerRef={radioRef} volume={volume} />
         </div>
     );
 }
