@@ -1,7 +1,6 @@
 .wrapper {
     width: var(--width-sidebar);
     height: 100%;
-    // background-color: var(--sidebar-popup-bg);
     overflow: hidden;
     background-color: transparent;
     transition: all 0.3s;
@@ -31,7 +30,7 @@
         .logo {
             flex-shrink: 0;
             height: var(--height-logo);
-            background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg');
+            background-image: url('../../../assets/img/yellowLogo.svg');
             background-size: 50%;
             background-repeat: no-repeat;
             background-position: 25% 50%;
@@ -142,7 +141,7 @@
     background-color: var(--sidebar-popup-bg);
     .logo {
         width: var(--width-sidebar-extend) !important;
-        background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg') !important;
+        background-image: url('../../../assets/img/silverLogo.svg') !important;
         background-size: 50% !important;
         background-position: 25% 50% !important;
     }
@@ -163,10 +162,9 @@
 @media screen and (max-width: 1200px) {
     .wrapper {
         background-color: var(--sidebar-popup-bg);
-
         .logo {
             width: var(--width-sidebar) !important;
-            background-image: url('https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.7.29/static/media/icon_zing_mp3_60.f6b51045.svg') !important;
+            background-image: url('../../../assets/img/iconLogo.svg') !important;
             background-position: 50% 50% !important;
             position: relative;
             background-size: 65% !important;

@@ -1,18 +1,20 @@
 import { useDispatch } from 'react-redux';
-import styles from './ThemModal.module.scss';
-import classNames from 'classnames/bind';
 import ThemItem from './ThemItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import { setIsOpenThemModal, setTheme } from '~/redux/audioSlice';
-import { themeDynamics } from '~/data/Theme';
+import { setIsOpenThemModal } from '~/redux/audioSlice';
+import { themeDynamics } from '~/components/ThemProvider/Theme';
+
+import styles from './ThemModal.module.scss';
+import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
+
 export default function ThemModal() {
     const dispatch = useDispatch();
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
-                <h2>Giao Diện</h2>
+                <h2>Theme</h2>
                 <span
                     className={cx('icon')}
                     onClick={() => {
@@ -25,8 +27,8 @@ export default function ThemModal() {
             <div className={cx('content')}>
                 <div className={cx('section')}>
                     <div className={cx('grid')}>
-                        {themeDynamics.map((theme, index) => (
-                            <ThemItem data={theme} key={index} />
+                        {themeDynamics.map((theme) => (
+                            <ThemItem data={theme} key={theme.id} />
                         ))}
                     </div>
                 </div>
