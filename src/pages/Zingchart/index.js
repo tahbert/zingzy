@@ -16,7 +16,6 @@ import {
     setPlaylistSong,
     setIsPlay,
     setPlaylistId,
-    setIsRadioPlay,
     setPlaylistRandom,
     setCurrentIndexSong,
     setCurrentIndexSongRandom,
@@ -58,7 +57,6 @@ function Zingchart() {
     const handlePlaySong = (song, playlist, id) => {
         let playlistCanPlay = [];
         if (song.streamingStatus === 1 && song.isWorldWide) {
-            dispatch(setIsRadioPlay(false));
             dispatch(setPlaylistId(id));
             dispatch(setCurrentTime(0));
             dispatch(setSrcAudio(''));

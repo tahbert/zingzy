@@ -86,11 +86,6 @@ const handleGetDetailCategory = async (req, res) => {
     return res.json(data);
 };
 
-const handleGetRadio = async (req, res) => {
-    let data = await zing.get_radio();
-    return res.json(data);
-};
-
 const handleGetArtistSongs = async (req, res) => {
     let data = await ZingMp3.getListArtistSong(req.params.id, '1', '100');
     return res.json(data);
@@ -114,7 +109,6 @@ export const controllers = {
     handleGetNewReleaseChart,
     handleSearchAll,
     handleGetTop100,
-    handleGetRadio,
     handleGetWeekChart,
     handleGetCategoryHome,
     handleGetDetailCategory,

@@ -17,7 +17,6 @@ import {
     setIsPlay,
     setLoop,
     setPlaylistSong,
-    setIsRadioPlay,
     setPlaylistRandom,
 } from '~/redux/audioSlice';
 
@@ -79,7 +78,6 @@ function Search() {
         }
     };
     const handlePlaySong = (song) => {
-        dispatch(setIsRadioPlay(false));
         dispatch(setIsPlay(false));
         dispatch(setSongId(song.encodeId));
         dispatch(setInfoSongPlayer(song));

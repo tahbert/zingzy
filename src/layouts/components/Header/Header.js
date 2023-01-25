@@ -68,10 +68,7 @@ function Header() {
                     </span>
                 </Tippy>
                 <Button circlem="true" className={cx('icon', 'img')}>
-                    <img
-                        src="https://s120-ava-talk-zmp3.zmdcdn.me/c/f/5/9/36/120/d7e2c9af9754c1305c6163278f0824c8.jpg"
-                        alt="logo"
-                    />
+                    <img src="images/tahbert.jpg" alt="logo" />
                 </Button>
             </div>
         </div>

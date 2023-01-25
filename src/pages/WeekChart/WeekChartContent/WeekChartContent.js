@@ -12,7 +12,6 @@ import {
     setPlaylistSong,
     setIsPlay,
     setPlaylistId,
-    setIsRadioPlay,
     setPlaylistRandom,
     setCurrentIndexSong,
     setCurrentIndexSongRandom,
@@ -41,7 +40,6 @@ function WeekChartContent() {
     const handlePlaySong = (song, playlist, id) => {
         let playlistCanPlay = [];
         if (song.streamingStatus === 1 && song.isWorldWide) {
-            dispatch(setIsRadioPlay(false));
             dispatch(setPlaylistId(id));
             dispatch(setCurrentTime(0));
             dispatch(setSrcAudio(''));

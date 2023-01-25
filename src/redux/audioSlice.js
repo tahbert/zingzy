@@ -1,9 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux';
 import mobilelogo from '~/assets/img/mobilelogo.png';
 const initialState = {
     isPlay: false,
-    isRadioPlay: false,
     isMute: false,
     isExtendSidebar: false,
     isOpenSidebarRight: false,
@@ -39,7 +37,6 @@ const initialState = {
         },
     },
     srcAudio: '',
-    srcRadio: JSON.parse(localStorage.getItem('srcRadio')) || '',
     currentTime: 0,
     duration: 0,
     volume: JSON.parse(localStorage.getItem('volume')) || 100,
@@ -58,9 +55,6 @@ const audioSlice = createSlice({
     reducers: {
         setIsPlay: (state, action) => {
             state.isPlay = action.payload;
-        },
-        setIsRadioPlay: (state, action) => {
-            state.isRadioPlay = action.payload;
         },
         setIsExtendSidebar: (state, action) => {
             state.isExtendSidebar = action.payload;
@@ -96,10 +90,6 @@ const audioSlice = createSlice({
         },
         setSrcAudio: (state, action) => {
             state.srcAudio = action.payload;
-        },
-        setSrcRadio: (state, action) => {
-            state.srcRadio = action.payload;
-            localStorage.setItem('srcRadio', JSON.stringify(action.payload));
         },
         setCurrentTime: (state, action) => {
             state.currentTime = action.payload;
@@ -169,8 +159,6 @@ export const {
     setRandom,
     setPrevSong,
     setPlaylistId,
-    setSrcRadio,
-    setIsRadioPlay,
     setPlaylistRandom,
     setCurrentIndexSongRandom,
 } = audioSlice.actions;

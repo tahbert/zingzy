@@ -10,7 +10,6 @@ import Player from '~/layouts/components/Player';
 import styles from './DefaultLayout.module.scss';
 import { setIsExtendSidebar, setIsOpenSidebarRight, setIsOpenThemModal } from '~/redux/audioSlice';
 import ThemModal from '~/components/ThemeModal';
-import { useEffect } from 'react';
 const cx = classNames.bind(styles);
 
 function DefaultLayout({ children }) {
@@ -20,7 +19,6 @@ function DefaultLayout({ children }) {
     const currentIndexSong = useSelector((state) => state.audio.currentIndexSong);
     const isOpenThemModal = useSelector((state) => state.audio.isOpenThemModal);
     const themeCurrent = useSelector((state) => state.audio.themeCurrent);
-    const srcRadio = useSelector((state) => state.audio.srcRadio);
     const [sticky, setSticky] = useState(false);
     const handleScroll = (e) => {
         if (e.currentTarget.scrollTop) {
@@ -70,9 +68,7 @@ function DefaultLayout({ children }) {
                 ></div>
             )}
 
-            <div className={cx('player')}>
-                {(!!currentIndexSong || !!currentIndexSongRandom || !!srcRadio) && <Player />}
-            </div>
+            <div className={cx('player')}>{(!!currentIndexSong || !!currentIndexSongRandom) && <Player />}</div>
         </div>
     );
 }

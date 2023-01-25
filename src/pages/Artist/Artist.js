@@ -16,7 +16,6 @@ import {
     setPlaylistSong,
     setSongId,
     setInfoSongPlayer,
-    setIsRadioPlay,
     setRandom,
     setPlaylistId,
     setCurrentTime,
@@ -63,7 +62,6 @@ function Artist() {
     const handleGetSong = (song, playlist, id) => {
         let playlistCanPlay = [];
         if (song.streamingStatus === 1 && song.isWorldWide) {
-            dispatch(setIsRadioPlay(false));
             dispatch(setPlaylistId(id));
             dispatch(setCurrentTime(0));
             dispatch(setSrcAudio(''));
@@ -110,7 +108,6 @@ function Artist() {
         } else {
             dispatch(setPlaylistId(id));
             dispatch(setIsPlay(true));
-            dispatch(setIsRadioPlay(false));
             dispatch(setCurrentTime(0));
             dispatch(setSrcAudio(''));
             randomIndex = Math.floor(Math.random() * songsCanPlay.length - 1) + 1;

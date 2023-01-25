@@ -6,7 +6,6 @@ import request from '~/utils/httpRequest';
 import {
     setInfoSongPlayer,
     setIsPlay,
-    setIsRadioPlay,
     setPlaylistId,
     setPlaylistRandom,
     setPlaylistSong,
@@ -21,7 +20,6 @@ function CarouselItem({ className, data }) {
     const dispatch = useDispatch();
     const onClickItem = (id) => {
         request.get(`/song/info/${id}`).then((res) => {
-            dispatch(setIsRadioPlay(false));
             dispatch(setSrcAudio(''));
             dispatch(setInfoSongPlayer(res.data));
             dispatch(setSongId(id));

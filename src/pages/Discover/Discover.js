@@ -19,7 +19,6 @@ import {
     setPlaylistSong,
     setIsPlay,
     setPlaylistId,
-    setIsRadioPlay,
     setPlaylistRandom,
     setCurrentIndexSong,
     setCurrentIndexSongRandom,
@@ -49,7 +48,6 @@ function Decover() {
     };
 
     const handlePlaySong = (song, playlist, id) => {
-        dispatch(setIsRadioPlay(false));
         dispatch(setCurrentTime(0));
         dispatch(setSrcAudio(''));
         dispatch(setPlaylistId(id));

@@ -1,8 +1,6 @@
-import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
-    setIsRadioPlay,
     setIsPlay,
     setSongId,
     setInfoSongPlayer,
@@ -30,7 +28,6 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(styles);
 
 function Search() {
-    const location = useLocation();
     const keyword = localStorage.getItem('searchKeyWord');
     const [data, setData] = useState({});
     const [showAllTab, setShowAllTab] = useState(true);
@@ -43,7 +40,6 @@ function Search() {
         dispatch(setIsDisabled(false));
         dispatch(setSrcAudio(''));
         dispatch(setCurrentTime(0));
-        dispatch(setIsRadioPlay(false));
         dispatch(setSongId(song.encodeId));
         dispatch(setInfoSongPlayer(song));
         dispatch(setPlaylistSong([song]));
