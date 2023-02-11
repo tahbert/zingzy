@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
 import { publicRoutes } from '~/routes';
 import DefaultLayout from '~/layouts';
 import store from './redux/store';

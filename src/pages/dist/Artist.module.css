@@ -1,0 +1,107 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.wrapper .info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: var(--offset-padding-page);
+  padding-top: 100px;
+  padding-bottom: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrapper .info.bg {
+  background-color: var(--chart-bg-img-alpha);
+}
+.wrapper .info .bio {
+  overflow: hidden;
+}
+.wrapper .info .bio .desc {
+  font-size: 1.4rem;
+  max-width: 400px;
+  margin: 15px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.wrapper .info .bio .play-btn {
+  border-color: var(--purple-primary);
+}
+.wrapper .info .bio .icon {
+  margin-right: 10px;
+}
+.wrapper .info .avatar {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+.wrapper .info .avatar img {
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  max-width: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper .songs-top {
+  height: 290px;
+  margin: 30px 0;
+  padding: var(--offset-padding-page);
+}
+.wrapper .songs-top .title {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.wrapper .songs-top .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 20px;
+}
+.wrapper .songs-top .content .avatar img {
+  max-width: 240px;
+  max-height: 240px;
+}
+.wrapper .songs-top .content .songs-section {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 250px;
+}
+
+@media screen and (max-width: 876px) {
+  .info {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .content {
+    grid-template-columns: 1fr !important;
+  }
+  .content .avatar {
+    display: none;
+  }
+  .songs-section {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .info {
+    grid-template-columns: 1fr !important;
+  }
+  .info .play-btn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+  }
+  .info .bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .info .avatar {
+    justify-content: center !important;
+  }
+}/*# sourceMappingURL=Artist.module.css.map */

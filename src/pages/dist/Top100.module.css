@@ -1,0 +1,43 @@
+.wrapper {
+  width: 100%;
+}
+.wrapper .banner {
+  position: relative;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .banner .title {
+  z-index: 9;
+  color: var(--purple-primary);
+  font-size: 8rem;
+  font-family: var(--font-second);
+  font-weight: 700;
+}
+.wrapper .banner .bg-blur,
+.wrapper .banner .bg-alpha,
+.wrapper .banner .bg-alppha1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 260px;
+  z-index: 0;
+}
+.wrapper .banner .bg-blur {
+  background: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.7.28/static/media/banner-100.33cafe6b.png) top/cover no-repeat;
+  filter: grayscale(1);
+}
+.wrapper .banner .bg-alpha {
+  background-image: linear-gradient(180deg, hsla(0deg, 0%, 100%, 0) 37%, var(--layout-bg));
+}
+.wrapper .banner .bg-alpha1 {
+  opacity: 0.8;
+  background-image: linear-gradient(180deg, var(--layout-bg), var(--layout-bg));
+}
+.wrapper .banner .bg-img {
+  height: 300px;
+  width: 100%;
+}/*# sourceMappingURL=Top100.module.css.map */

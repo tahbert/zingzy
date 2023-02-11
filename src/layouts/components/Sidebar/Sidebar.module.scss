@@ -30,7 +30,7 @@
         .logo {
             flex-shrink: 0;
             height: var(--height-logo);
-            background-image: url('../../../assets/img/yellowLogo.svg');
+            background-image: url('../../../assets/img/fullLogo.svg');
             background-size: 50%;
             background-repeat: no-repeat;
             background-position: 25% 50%;
@@ -141,7 +141,7 @@
     background-color: var(--sidebar-popup-bg);
     .logo {
         width: var(--width-sidebar-extend) !important;
-        background-image: url('../../../assets/img/silverLogo.svg') !important;
+        background-image: url('../../../assets/img/fullLogo.svg') !important;
         background-size: 50% !important;
         background-position: 25% 50% !important;
     }

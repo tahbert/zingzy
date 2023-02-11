@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 3;
+}
+.wrapper .loading-icon {
+  -webkit-animation: spinner 3s linear infinite;
+          animation: spinner 3s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    transform: translateY(-50%) rotate(0);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: translateY(-50%) rotate(0);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}/*# sourceMappingURL=Loading.module.css.map */

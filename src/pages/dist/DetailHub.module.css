@@ -1,0 +1,27 @@
+.wrapper {
+  width: 100%;
+  margin-top: var(--offset-padding-page);
+}
+.wrapper .banner {
+  position: relative;
+  min-height: 200px;
+  max-height: 300px;
+  overflow: hidden;
+}
+.wrapper .banner img {
+  width: 100%;
+  height: auto;
+}
+.wrapper .banner .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgb(23, 15, 35), rgba(23, 15, 35, 0.5), rgba(23, 15, 35, 0.02));
+}
+.wrapper .section {
+  z-index: 1;
+  position: relative;
+  margin-top: -90px;
+}/*# sourceMappingURL=DetailHub.module.css.map */

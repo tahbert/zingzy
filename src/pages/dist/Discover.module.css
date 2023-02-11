@@ -1,0 +1,40 @@
+.wrapper {
+  width: 100%;
+  margin-top: calc(var(--offset-top) + 30px);
+}
+.wrapper .new-release {
+  padding: var(--offset-padding-page);
+  margin: 30px 0;
+}
+.wrapper .new-release .title {
+  font-size: 2rem;
+}
+.wrapper .new-release .header {
+  margin: 20px 0;
+}
+.wrapper .new-release .header .btn {
+  margin-right: 20px;
+  border-color: var(--link-text);
+  text-transform: uppercase;
+}
+.wrapper .new-release .header .btn.active {
+  background-color: var(--purple-primary);
+  border-color: var(--purple-primary);
+}
+.wrapper .new-release .grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 876px) {
+  .grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}/*# sourceMappingURL=Discover.module.css.map */

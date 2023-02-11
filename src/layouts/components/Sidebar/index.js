@@ -16,7 +16,7 @@ import {
 import { SidebarItem } from './Menu';
 import styles from './Sidebar.module.scss';
 import classNames from 'classnames/bind';
-import Button from '~/components/Button/Button';
+import Button from '~/components/Button';
 import { setIsExtendSidebar } from '~/redux/audioSlice';
 const cx = classNames.bind(styles);
 
